@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxnh75s5it65l"]
 
-[ext_resource type="Texture2D" uid="uid://0bgad8cd7sbq" path="res://Green.png" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://ckd5r66djyomk" path="res://Terrain (16x16).png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://0bgad8cd7sbq" path="res://assets/Green.png" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://ckd5r66djyomk" path="res://assets/Terrain (16x16).png" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cjcf0r2jmvcbd" path="res://scenes/main_character.tscn" id="3_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
