@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://cxbtj6t462cco"]
+
+[ext_resource type="Texture2D" uid="uid://bxbyoljqrp3hn" path="res://assets/bck.png" id="1_qk8rs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sh77"]
+texture = ExtResource("1_qk8rs")
+modulate_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+
+[node name="SettingsMenu" type="Control" unique_id=764795792]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=423274969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0sh77")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=134176096]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.25
+offset_top = -80.0
+offset_right = 161.25
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window_settings" type="VBoxContainer" parent="VBoxContainer" unique_id=490606556]
+layout_mode = 2
+
+[node name="title" type="Label" parent="VBoxContainer/Window_settings" unique_id=1501881755]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Window settings"
+
+[node name="btn" type="HBoxContainer" parent="VBoxContainer/Window_settings" unique_id=1708554697]
+layout_mode = 2
+
+[node name="Btn_window_settings_fullscreen" type="Button" parent="VBoxContainer/Window_settings/btn" unique_id=45181775]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "fullscreen"
+
+[node name="Btn_window_settings_windowed" type="Button" parent="VBoxContainer/Window_settings/btn" unique_id=154456247]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "windowed"
+
+[node name="Sound" type="VBoxContainer" parent="VBoxContainer" unique_id=1780616841]
+layout_mode = 2
+
+[node name="title" type="Label" parent="VBoxContainer/Sound" unique_id=2138238429]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Sound"
+
+[node name="HSldr_sound" type="HSlider" parent="VBoxContainer/Sound" unique_id=216798501]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Vibration" type="VBoxContainer" parent="VBoxContainer" unique_id=1158282447]
+layout_mode = 2
+
+[node name="title" type="Label" parent="VBoxContainer/Vibration" unique_id=1192225764]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Vibration"
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/Vibration" unique_id=1941418597]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="Btn_exit" type="Button" parent="." unique_id=231691221]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = -98.0
+offset_right = 179.0
+offset_bottom = -27.0
+grow_vertical = 0
+text = "Return"
