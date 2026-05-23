@@ -242,24 +242,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_aso0j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_acyvo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vuccm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ewvp4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e6xxv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cl31c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m0um1")
 }],
 "loop": false,
 "name": &"Artdef",
@@ -448,7 +430,7 @@ shape = SubResource("RectangleShape2D_kudnt")
 texture_filter = 1
 scale = Vector2(1.3125, 1.3125)
 sprite_frames = SubResource("SpriteFrames_pvtuh")
-animation = &"Artmelee"
+animation = &"Artdef"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=421163500]
