@@ -1,0 +1,2 @@
+class_name special_attack
+extends BaseAttack

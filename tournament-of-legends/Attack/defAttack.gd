@@ -1,0 +1,2 @@
+class_name def_attack
+extends BaseAttack
