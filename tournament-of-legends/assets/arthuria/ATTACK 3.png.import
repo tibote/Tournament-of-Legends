@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dperqm10tfi4o"
-path="res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"
+uid="uid://dejfgsento7vt"
+path="res://.godot/imported/ATTACK 3.png-e7994397ba3dd59ad05415afdcffadd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bck.png"
-dest_files=["res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"]
+source_file="res://assets/arthuria/ATTACK 3.png"
+dest_files=["res://.godot/imported/ATTACK 3.png-e7994397ba3dd59ad05415afdcffadd8.ctex"]
 
 [params]
 

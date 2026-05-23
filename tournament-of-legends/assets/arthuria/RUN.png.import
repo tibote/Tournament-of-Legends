@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dperqm10tfi4o"
-path="res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"
+uid="uid://rovyf5g0tkbh"
+path="res://.godot/imported/RUN.png-e57e8ef40782ce2583a676fcb8fdd3ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bck.png"
-dest_files=["res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"]
+source_file="res://assets/arthuria/RUN.png"
+dest_files=["res://.godot/imported/RUN.png-e57e8ef40782ce2583a676fcb8fdd3ea.ctex"]
 
 [params]
 

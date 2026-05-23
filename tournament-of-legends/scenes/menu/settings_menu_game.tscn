@@ -1,6 +1,4 @@
 [gd_scene format=3 uid="uid://ugrrrd1walli"]
-
-[ext_resource type="Script" uid="uid://b72b3fadq1gto" path="res://scenes/menu/settings_menu_game.gd" id="1_1yvqu"]
 [ext_resource type="Texture2D" uid="uid://bxbyoljqrp3hn" path="res://assets/bck.png" id="2_72tb1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sh77"]

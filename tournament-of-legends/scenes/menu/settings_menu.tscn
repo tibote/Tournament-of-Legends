@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cxbtj6t462cco"]
 
 [ext_resource type="Script" uid="uid://i0ju4wg0eiic" path="res://scenes/menu/settings_menu.gd" id="1_0sh77"]
-[ext_resource type="Texture2D" uid="uid://bxbyoljqrp3hn" path="res://assets/bck.png" id="1_qk8rs"]
+[ext_resource type="Texture2D" uid="uid://deadituoyo6d8" path="res://assets/bck.jpg" id="2_0sh77"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sh77"]
-texture = ExtResource("1_qk8rs")
+texture = ExtResource("2_0sh77")
 modulate_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qk8rs"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dperqm10tfi4o"
-path="res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"
+uid="uid://jmsa4rirgwi4"
+path="res://.godot/imported/boule-feu.png-d48c06b13a3fb2cf265455db6d35db59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bck.png"
-dest_files=["res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"]
+source_file="res://Attack/projectiles/boule-feu.png"
+dest_files=["res://.godot/imported/boule-feu.png-d48c06b13a3fb2cf265455db6d35db59.ctex"]
 
 [params]
 

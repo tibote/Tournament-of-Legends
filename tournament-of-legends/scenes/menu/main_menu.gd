@@ -34,7 +34,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventJoypadButton:
 		if event.button_index == JOY_BUTTON_A and event.pressed:
 			if get_viewport().gui_get_focus_owner() == $VBoxContainer/Btn_play:
-				get_tree().change_scene_to_file("res://scenes/main.tscn")
+				get_tree().change_scene_to_file("res://scenes/menu/select_player.tscn")
 			elif get_viewport().gui_get_focus_owner() == $VBoxContainer/Btn_settings:
 				get_tree().change_scene_to_file("res://scenes/menu/settings_menu.tscn")
 			elif get_viewport().gui_get_focus_owner() == $VBoxContainer/Btn_quit:

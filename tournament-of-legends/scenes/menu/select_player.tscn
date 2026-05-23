@@ -1,19 +1,90 @@
 [gd_scene format=3 uid="uid://bfnwhfx5m72dw"]
 
 [ext_resource type="Script" uid="uid://bhtljyivvfjmq" path="res://scenes/menu/select_player.gd" id="1_ebl4h"]
-[ext_resource type="Texture2D" uid="uid://bxbyoljqrp3hn" path="res://assets/bck.png" id="1_tn05a"]
-[ext_resource type="Texture2D" uid="uid://dh7knb0t711yw" path="res://assets/Ninja Frog/Jump (32x32).png" id="2_81tep"]
+[ext_resource type="Texture2D" uid="uid://deadituoyo6d8" path="res://assets/bck.jpg" id="2_ebl4h"]
 [ext_resource type="Texture2D" uid="uid://bai3yoiouvrco" path="res://assets/Pink Man/Jump (32x32).png" id="3_24v8s"]
+[ext_resource type="Texture2D" uid="uid://c7mla2ycwdkuh" path="res://assets/arthuria/Arthuria.png" id="3_ebl4h"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81tep"]
-texture = ExtResource("1_tn05a")
+texture = ExtResource("2_ebl4h")
 modulate_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24v8s"]
-texture = ExtResource("2_81tep")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4427n"]
+texture = ExtResource("3_ebl4h")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebl4h"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftq1w"]
+bg_color = Color(0.42745098, 0.42745098, 0.42745098, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4427n"]
+bg_color = Color(0.6901961, 0.6901961, 0.6901961, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvgp1"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebl4h"]
 texture = ExtResource("3_24v8s")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80tf4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lkth"]
+bg_color = Color(0.42745098, 0.42745098, 0.42745098, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r057k"]
+bg_color = Color(0.6901961, 0.6901961, 0.6901961, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17j15"]
+bg_color = Color(0.6901961, 0.6901961, 0.6901961, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
 
 [node name="SelectPlayer" type="Control" unique_id=1437783320]
 layout_mode = 3
@@ -55,11 +126,22 @@ size_flags_horizontal = 3
 [node name="Panel" type="Panel" parent="HBoxContainer/Perso_1" unique_id=1563698003]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxTexture_24v8s")
+theme_override_styles/panel = SubResource("StyleBoxTexture_4427n")
 
 [node name="Btn_select_arthuria" type="Button" parent="HBoxContainer/Perso_1" unique_id=724608445]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../../Perso_2/Btn_select_ankou")
+focus_neighbor_right = NodePath("../../Perso_2/Btn_select_ankou")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebl4h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ftq1w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4427n")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fvgp1")
 text = "Select Arthuria"
 
 [node name="Perso_2" type="VBoxContainer" parent="HBoxContainer" unique_id=1707173357]
@@ -74,6 +156,16 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ebl4h")
 [node name="Btn_select_ankou" type="Button" parent="HBoxContainer/Perso_2" unique_id=2117077229]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../../Perso_1/Btn_select_arthuria")
+focus_neighbor_right = NodePath("../../Perso_1/Btn_select_arthuria")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_80tf4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0lkth")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r057k")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17j15")
 text = "Select Ankou"
 
 [connection signal="pressed" from="HBoxContainer/Perso_1/Btn_select_arthuria" to="." method="_on_btn_select_arthuria_pressed"]

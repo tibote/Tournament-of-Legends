@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dperqm10tfi4o"
-path="res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"
+uid="uid://c7mla2ycwdkuh"
+path="res://.godot/imported/Arthuria.png-84806c98a44f7704fa8a16bbded75323.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bck.png"
-dest_files=["res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"]
+source_file="res://assets/arthuria/Arthuria.png"
+dest_files=["res://.godot/imported/Arthuria.png-84806c98a44f7704fa8a16bbded75323.ctex"]
 
 [params]
 
