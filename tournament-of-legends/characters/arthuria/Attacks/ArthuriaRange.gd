@@ -4,7 +4,7 @@ extends range_attack
 func _init() -> void:
 	_damage = 70000
 	_cooldown = 3
-	_channelling = 0
+	_channelling = 0.3
 	projectile_speed = 400
 	projectile_scene = preload("res://Attack/projectiles/Excalibaser.tscn")
 
