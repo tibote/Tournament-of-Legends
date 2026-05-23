@@ -67,4 +67,3 @@ func _process(delta: float) -> void:
 	for i in attacks.size():
 		var action = "attack_%d" % (i +1)
 		attacks[i].tick(delta)
-	print(Input.get_connected_joypads())
