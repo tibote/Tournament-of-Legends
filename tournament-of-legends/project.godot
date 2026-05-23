@@ -11,9 +11,18 @@ config_version=5
 [application]
 
 config/name="Tournament of legends"
-run/main_scene="uid://dxnh75s5it65l"
+run/main_scene="uid://o6qvq3gfc8v"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://bqymtlbohdea"
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
