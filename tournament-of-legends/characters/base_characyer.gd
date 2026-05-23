@@ -12,6 +12,11 @@ var defense_multiplicator: float = 1
 var jauge_spe: int = 500
 var is_in_action := false
 
+var input_direction: float = 0.0
+var wants_jump: bool = false
+var wants_attack: Array[bool] = [false, false, false, false]
+var is_bot: bool = false
+
 func setup_attacks() -> void:
 	pass
 
@@ -22,8 +27,20 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	_update_action_state()
+	
+	if not is_bot:
+		input_direction = Input.get_axis("ui_left", "ui_right")
+		wants_jump = Input.is_action_just_pressed("jump")
+		for i in attacks.size():
+			var action = "attack_%d" % (i + 1)
+			wants_attack[i] = Input.is_action_just_pressed(action)
+
 	_handle_attack_inputs()
 	_handle_movement(delta)
+
+	wants_jump = false
+	for i in wants_attack.size():
+		wants_attack[i] = false
 
 func _handle_movement(delta: float) -> void:
 	if not is_on_floor():
@@ -41,19 +58,17 @@ func _handle_movement(delta: float) -> void:
 	else:
 		sprite_2d.animation = "idle"
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if wants_jump and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	if input_direction != 0:
+		velocity.x = input_direction * SPEED
+		
+		sprite_2d.flip_h = (input_direction < 0)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
-	var isLeft = velocity.x < 0
-	sprite_2d.flip_h = isLeft
 
 func charge_gauge(amount: int) -> void:
 	jauge_spe = min(jauge_spe + amount, 1000)
@@ -63,8 +78,7 @@ func decharge_gauge(amount: int) -> void:
 
 func _handle_attack_inputs() -> void:
 	for i in attacks.size():
-		var action = "attack_%d" % (i + 1)
-		if Input.is_action_just_pressed(action):
+		if wants_attack[i]:
 			attacks[i].execute(self)
 
 func melee_hit(dmg: int) -> void:

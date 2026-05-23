@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d324vyisahy3e" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://ckd5r66djyomk" path="res://assets/Terrain (16x16).png" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dperqm10tfi4o" path="res://assets/bck.png" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cadwey0m8n2s7" path="res://scenes/Hud.tscn" id="4_jyhfs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
 texture = ExtResource("2_1bvp3")
@@ -211,3 +212,7 @@ layer_0/tile_data = PackedInt32Array(720896, 458752, 4, 786432, 458752, 5, 72089
 position = Vector2(406, 447)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1709184876]
+
+[node name="Hud" parent="CanvasLayer" unique_id=963437763 instance=ExtResource("4_jyhfs")]
+size_flags_horizontal = 0
+size_flags_vertical = 8
