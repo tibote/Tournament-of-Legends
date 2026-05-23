@@ -80,14 +80,17 @@ func melee_hit(dmg: int) -> void:
 
 func take_damage(dmg: int) -> void:
 	hp -= dmg * defense_multiplicator
+	if hp <= 0:
+		hp = 0
+		_die()
 
 func _heal(heal: int) -> void:
 	hp += heal
-	if hp <= 0:
-		hp = 0
-	_die()
+
+var is_dying := false	
 
 func _die() -> void:
+	is_dying = true
 	is_in_action = true
 	sprite_2d.play("death")
 	await sprite_2d.animation_finished
@@ -98,7 +101,7 @@ func _process(delta: float) -> void:
 		attacks[i].tick(delta)
 
 func _update_action_state() -> void:
-	if not is_in_action:
+	if not is_in_action or is_dying:
 		return
 	var still_channelling = attacks.any(func(a): return a._decaying_channelling > 0)
 	if not still_channelling:
