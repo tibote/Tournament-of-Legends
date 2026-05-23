@@ -8,8 +8,7 @@ radius = 94.0
 height = 446.0
 
 [node name="Crawstorm" type="Area2D" unique_id=761007130]
-collision_layer = 5
-collision_mask = 2
+collision_layer = 2
 script = ExtResource("1_xdfcf")
 
 [node name="crawstorm" type="Sprite2D" parent="." unique_id=444540354]

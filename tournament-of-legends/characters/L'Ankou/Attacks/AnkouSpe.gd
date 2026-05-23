@@ -4,7 +4,7 @@ extends special_attack
 const CUTSCENE_SCENE = preload("res://characters/L'Ankou/AnkouCutscene.tscn")
 
 func _init() -> void:
-	_damage = 300000
+	_damage = 3000000000
 	_cooldown = 10.0
 	_channelling = 1.5
 
