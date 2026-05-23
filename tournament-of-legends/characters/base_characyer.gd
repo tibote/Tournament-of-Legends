@@ -6,17 +6,17 @@ const JUMP_VELOCITY = -500.0
 
 var sprite_2d: AnimatedSprite2D
 var attacks: Array[BaseAttack] = []
-
-
+var hp: int
+var lvl_multiplicator: float
+var defense_multiplicator: float
+var jauge_spe: int
 var is_in_action := false
-
 func setup_attacks() -> void:
 	pass
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setup_attacks()
-
-
+@onready var hitbox: Area2D = $HitboxArea
 
 func _physics_process(delta: float) -> void:
 	_handle_movement(delta)
@@ -53,6 +53,8 @@ func _handle_movement(delta: float) -> void:
 	
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+func charge_gauge(amount: int) -> void:
+	jauge_spe = min(jauge_spe + amount, 1000)
 
 func _handle_attack_inputs() -> void:
 	for i in attacks.size():
@@ -60,10 +62,22 @@ func _handle_attack_inputs() -> void:
 		if Input.is_action_just_pressed(action):
 			attacks[i].execute(self)
 
-	
+func melee_hit(dmg: int) -> void:
+	hitbox.monitoring = true
+	for body in hitbox.get_overlapping_bodies():
+		if body == self:
+			continue
+		if body is BaseCharacter:  # On vérifie que c'est bien un BaseCharacter
+			body.take_damage(dmg)
+			charge_gauge(50)
+	hitbox.monitoring = false
 
+func _take_damage(dmg: int) -> void:
+	hp -= dmg * defense_multiplicator
+
+func _heal(heal: int) -> void:
+	hp += heal
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	for i in attacks.size():
-		var action = "attack_%d" % (i +1)
 		attacks[i].tick(delta)
