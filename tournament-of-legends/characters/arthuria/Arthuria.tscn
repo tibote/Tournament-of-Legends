@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b45nm7tiodju5" path="res://assets/arthuria/ATTACK 2.png" id="4_3pkv6"]
 [ext_resource type="Texture2D" uid="uid://rovyf5g0tkbh" path="res://assets/arthuria/RUN.png" id="4_ehmkx"]
 [ext_resource type="Texture2D" uid="uid://dejfgsento7vt" path="res://assets/arthuria/ATTACK 3.png" id="5_3pkv6"]
+[ext_resource type="AudioStream" uid="uid://cp08oebyklo4e" path="res://assets/arthuria/sword_sound.mp3" id="11_xn2ac"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kudnt"]
 radius = 15.0
@@ -484,15 +485,18 @@ script = ExtResource("1_l6mfb")
 [node name="HitboxArea" type="Area2D" parent="." unique_id=2143257726]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitboxArea" unique_id=1958255397]
-position = Vector2(36, 5)
+position = Vector2(22, 7)
 shape = SubResource("CircleShape2D_kudnt")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1363030717]
 texture_filter = 1
+position = Vector2(-3.8146973e-06, -1.1920929e-07)
 scale = Vector2(1.31, 1.31)
 sprite_frames = SubResource("SpriteFrames_2r4cn")
-animation = &"death"
+animation = &"Artmelee"
 autoplay = "idle"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653300168]
 position = Vector2(0, 3)
@@ -504,3 +508,6 @@ limit_left = 0
 limit_top = 0
 limit_right = 1152
 limit_bottom = 652
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=742248754]
+stream = ExtResource("11_xn2ac")

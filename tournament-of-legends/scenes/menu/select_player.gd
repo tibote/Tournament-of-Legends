@@ -13,11 +13,15 @@ func _process(delta: float) -> void:
 
 func _on_btn_select_arthuria_pressed() -> void:
 	Global.selected_character_path = Global.CHARACTERS["arthuria"]
+	Global.player1_character = "Arthuria"
+	Global.player2_character = "Ankou"
 	_start_game()
 
 
 func _on_btn_select_ankou_pressed() -> void:
 	Global.selected_character_path = Global.CHARACTERS["ankou"]
+	Global.player1_character = "Ankou"
+	Global.player2_character = "Arthuria"
 	_start_game()
 	
 func _start_game() -> void:
@@ -25,11 +29,26 @@ func _start_game() -> void:
 		get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventJoypadButton:
-		if event.button_index == JOY_BUTTON_A and event.pressed:
-			if get_viewport().gui_get_focus_owner() == $HBoxContainer/Perso_1/Btn_select_ankou:
-				Global.selected_character_path = Global.CHARACTERS["ankou"]
-				_start_game()
-			if get_viewport().gui_get_focus_owner() == $HBoxContainer/Perso_1/Btn_select_arthuria:
-				Global.selected_character_path = Global.CHARACTERS["arthuria"]
-				_start_game()
+	if not event is InputEventJoypadButton or not event.pressed:
+		return
+	if event.button_index != JOY_BUTTON_A:
+		return
+	
+	var viewport = get_viewport()
+	if viewport == null:
+		return
+		
+	var focused = viewport.gui_get_focus_owner()
+	if focused == null:
+		return
+	
+	if focused == $HBoxContainer/Perso_2/Btn_select_ankou:
+		Global.selected_character_path = Global.CHARACTERS["ankou"]
+		Global.player1_character = "Ankou"
+		Global.player2_character = "Arthuria"
+		_start_game()
+	elif focused == $HBoxContainer/Perso_1/Btn_select_arthuria:
+		Global.selected_character_path = Global.CHARACTERS["arthuria"]
+		Global.player1_character = "Arthuria"
+		Global.player2_character = "Ankou"
+		_start_game()

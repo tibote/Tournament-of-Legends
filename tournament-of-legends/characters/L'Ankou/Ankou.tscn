@@ -236,10 +236,6 @@ region = Rect2(43, 0, 43, 37)
 atlas = ExtResource("5_37con")
 region = Rect2(86, 0, 43, 37)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s1eg2"]
-atlas = ExtResource("5_37con")
-region = Rect2(129, 0, 43, 37)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_fwqpe"]
 atlas = ExtResource("5_37con")
 region = Rect2(172, 0, 43, 37)
@@ -295,6 +291,10 @@ region = Rect2(688, 0, 43, 37)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ys6j8"]
 atlas = ExtResource("5_37con")
 region = Rect2(731, 0, 43, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1eg2"]
+atlas = ExtResource("5_37con")
+region = Rect2(129, 0, 43, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fguc3"]
 atlas = ExtResource("2_0xqd6")
@@ -678,9 +678,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_et5bu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s1eg2")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_fwqpe")
 }, {
 "duration": 1.0,
@@ -721,6 +718,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ys6j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1eg2")
 }],
 "loop": false,
 "name": &"Ankouspe",
@@ -912,6 +912,8 @@ scale = Vector2(2.4509866, 2.4280388)
 sprite_frames = SubResource("SpriteFrames_pvtuh")
 animation = &"Ankouspe"
 autoplay = "idle"
+frame = 17
+frame_progress = 1.0
 speed_scale = 0.7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=421163500]
@@ -921,7 +923,7 @@ shape = SubResource("RectangleShape2D_ig48j")
 [node name="HitboxArea" type="Area2D" parent="." unique_id=905188982]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea" unique_id=22335398]
-position = Vector2(76, 6)
+position = Vector2(46, 6)
 shape = SubResource("CircleShape2D_0xqd6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1238573457]

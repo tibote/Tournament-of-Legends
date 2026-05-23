@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bhtljyivvfjmq" path="res://scenes/menu/select_player.gd" id="1_ebl4h"]
 [ext_resource type="Texture2D" uid="uid://deadituoyo6d8" path="res://assets/bck.jpg" id="2_ebl4h"]
-[ext_resource type="Texture2D" uid="uid://bai3yoiouvrco" path="res://assets/Pink Man/Jump (32x32).png" id="3_24v8s"]
 [ext_resource type="Texture2D" uid="uid://c7mla2ycwdkuh" path="res://assets/arthuria/Arthuria.png" id="3_ebl4h"]
+[ext_resource type="Texture2D" uid="uid://blwgqrnwt1ga3" path="res://assets/l'Ankou/Ankou.png" id="4_ebl4h"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81tep"]
 texture = ExtResource("2_ebl4h")
@@ -48,7 +48,8 @@ shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebl4h"]
-texture = ExtResource("3_24v8s")
+texture = ExtResource("4_ebl4h")
+expand_margin_top = 48.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80tf4"]
 bg_color = Color(1, 1, 1, 1)
@@ -149,6 +150,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Panel" type="Panel" parent="HBoxContainer/Perso_2" unique_id=1591504148]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_ebl4h")

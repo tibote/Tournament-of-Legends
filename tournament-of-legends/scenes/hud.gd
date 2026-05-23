@@ -6,7 +6,7 @@ const CHARACTERS = {
 		"name": "Arthuria"
 	},
 	"Ankou": {
-		"avatar": preload("res://assets/Ninja Frog/Jump (32x32).png"),
+		"avatar": preload("res://assets/l'Ankou/Ankou.png"),
 		"name": "Ankou"
 	}
 }
