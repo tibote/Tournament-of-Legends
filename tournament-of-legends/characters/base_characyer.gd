@@ -82,6 +82,7 @@ func _process(delta: float) -> void:
 	for i in attacks.size():
 		attacks[i].tick(delta)
 
+
 func _update_action_state() -> void:
 	if not is_in_action:
 		return
