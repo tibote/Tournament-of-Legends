@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dsehafetiropk"]
+
+[ext_resource type="Script" uid="uid://bvcc4e7l0op0k" path="res://Attack/projectiles/crawstorm.gd" id="1_xdfcf"]
+[ext_resource type="Texture2D" uid="uid://bwi24hvuwe8ip" path="res://assets/l'Ankou/crawstorm.png" id="2_rx74f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xdfcf"]
+radius = 94.0
+height = 446.0
+
+[node name="Crawstorm" type="Area2D" unique_id=761007130]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_xdfcf")
+
+[node name="crawstorm" type="Sprite2D" parent="." unique_id=444540354]
+position = Vector2(0.5000038, 0.4999981)
+rotation = 3.1415927
+scale = Vector2(0.32486978, 0.36621094)
+texture = ExtResource("2_rx74f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717533530]
+position = Vector2(16, -15)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_xdfcf")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1412010165]
+position = Vector2(-454, -187)
+rect = Rect2(252, 35, 438, 244)

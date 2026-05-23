@@ -8,8 +8,7 @@
 radius = 31.016125
 
 [node name="Excalibaser" type="Area2D" unique_id=570997818]
-collision_layer = 4
-collision_mask = 2
+collision_layer = 2
 script = ExtResource("1_a18er")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=179168960]

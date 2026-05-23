@@ -10,4 +10,5 @@ func _perform(character: BaseCharacter) -> void:
 	character.sprite_2d.animation = "Artdef"
 	character.defense_multiplicator = 0
 	await character.get_tree().create_timer(_channelling).timeout
-	character.defense_multiplicator = 1
+	if is_instance_valid(character):
+		character.defense_multiplicator = 1
