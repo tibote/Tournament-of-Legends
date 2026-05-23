@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cadwey0m8n2s7"]
+[gd_scene format=3 uid="uid://dnyijgna1rve5"]
 
 [ext_resource type="Script" uid="uid://clppfdn2eu1gp" path="res://scenes/hud.gd" id="1_wfueu"]
 
@@ -6,6 +6,9 @@
 bg_color = Color(0.7176471, 0.14901961, 0.18039216, 1)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfueu"]
+bg_color = Color(0.008, 0.008, 1.306, 1)
 
 [node name="Hud" type="Control" unique_id=2097804198]
 layout_mode = 3
@@ -54,8 +57,18 @@ custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_styles/fill = SubResource("StyleBoxFlat_y5umd")
-step = 1.0
 value = 100.0
+fill_mode = 1
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="GaugeBar" type="ProgressBar" parent="HBoxContainer/VBoxContainer" unique_id=1681168023]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_wfueu")
+max_value = 1000.0
 fill_mode = 1
 show_percentage = false
 metadata/_edit_use_anchors_ = true
@@ -87,5 +100,15 @@ size_flags_vertical = 2
 theme_override_styles/fill = SubResource("StyleBoxFlat_y5umd")
 step = 1.0
 value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="GaugeBar" type="ProgressBar" parent="HBoxContainer/VBoxContainer2" unique_id=1202518563]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_wfueu")
+max_value = 1000.0
 show_percentage = false
 metadata/_edit_use_anchors_ = true

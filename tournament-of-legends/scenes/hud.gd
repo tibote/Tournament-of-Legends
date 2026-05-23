@@ -36,9 +36,15 @@ func setup_characters(p: BaseCharacter, b: BaseCharacter) -> void:
 	$HBoxContainer/VBoxContainer2/ProgressBar.max_value = b.hp
 	$HBoxContainer/VBoxContainer/ProgressBar.value = p.hp
 	$HBoxContainer/VBoxContainer2/ProgressBar.value = b.hp
+	$HBoxContainer/VBoxContainer/GaugeBar.max_value = 1000
+	$HBoxContainer/VBoxContainer2/GaugeBar.max_value = 1000
+	$HBoxContainer/VBoxContainer/GaugeBar.value = 0
+	$HBoxContainer/VBoxContainer2/GaugeBar.value = 0
 
 func _process(_delta: float) -> void:
 	if is_instance_valid(player):
 		$HBoxContainer/VBoxContainer/ProgressBar.value = player.hp
+		$HBoxContainer/VBoxContainer/GaugeBar.value = player.jauge_spe
 	if is_instance_valid(bot):
 		$HBoxContainer/VBoxContainer2/ProgressBar.value = bot.hp
+		$HBoxContainer/VBoxContainer2/GaugeBar.value = bot.jauge_spe 
