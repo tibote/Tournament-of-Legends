@@ -13,7 +13,6 @@ var jauge_spe: int = 500
 var is_in_action := false
 func setup_attacks() -> void:
 	pass
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setup_attacks()
 @onready var hitbox: Area2D = $HitboxArea
@@ -31,7 +30,7 @@ func _handle_movement(delta: float) -> void:
 	if is_in_action:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		move_and_slide()
-		return  # ← stop, pas de saut ni déplacement
+		return
 	if not is_on_floor():
 		sprite_2d.animation = "jump"
 	elif abs(velocity.x) > 1:
@@ -55,6 +54,8 @@ func _handle_movement(delta: float) -> void:
 func charge_gauge(amount: int) -> void:
 	jauge_spe = min(jauge_spe + amount, 1000)
 
+func decharge_gauge(amount: int) -> void:
+	jauge_spe = min(jauge_spe - amount, 0)
 func _handle_attack_inputs() -> void:
 	for i in attacks.size():
 		var action = "attack_%d" % (i + 1)
@@ -66,9 +67,10 @@ func melee_hit(dmg: int) -> void:
 	for body in hitbox.get_overlapping_bodies():
 		if body == self:
 			continue
-		if body is BaseCharacter:  # On vérifie que c'est bien un BaseCharacter
+		if body is BaseCharacter:
 			body.take_damage(dmg)
 			charge_gauge(50)
+			body.decharge_gauge(50)
 	hitbox.monitoring = false
 
 func _take_damage(dmg: int) -> void:
@@ -76,7 +78,6 @@ func _take_damage(dmg: int) -> void:
 
 func _heal(heal: int) -> void:
 	hp += heal
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	for i in attacks.size():
 		attacks[i].tick(delta)
