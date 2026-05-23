@@ -17,5 +17,5 @@ func _perform(charcater: BaseCharacter) -> void:
 	pass
 func tick(delta: float) -> void:
 	_decaying_cd = max(0, _decaying_cd - delta)
-
+	
 # Called when the node enters the scene tree for the first time.
