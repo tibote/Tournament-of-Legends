@@ -20,7 +20,7 @@ func spawn_player() -> void:
 		print("Erreur : Impossible de charger la scène du personnage !")
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("pause"):
 		get_viewport().set_input_as_handled()
 		open_pause_menu()
 
