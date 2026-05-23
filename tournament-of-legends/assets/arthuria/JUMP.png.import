@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dperqm10tfi4o"
-path="res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"
+uid="uid://doi81afyiey4v"
+path="res://.godot/imported/JUMP.png-56fc60a08f31ce492b57723c19c2ac7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bck.png"
-dest_files=["res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"]
+source_file="res://assets/arthuria/JUMP.png"
+dest_files=["res://.godot/imported/JUMP.png-56fc60a08f31ce492b57723c19c2ac7c.ctex"]
 
 [params]
 

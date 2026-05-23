@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dperqm10tfi4o"
-path="res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"
+uid="uid://c3obbxivie3bn"
+path="res://.godot/imported/DEATH.png-7f4ac1438e2c98a900aa8f0495c98ad0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bck.png"
-dest_files=["res://.godot/imported/bck.png-65a9567ae50e9d1511eb5b9516346303.ctex"]
+source_file="res://assets/arthuria/DEATH.png"
+dest_files=["res://.godot/imported/DEATH.png-7f4ac1438e2c98a900aa8f0495c98ad0.ctex"]
 
 [params]
 
