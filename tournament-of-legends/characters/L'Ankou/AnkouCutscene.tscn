@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dw4mjt5it86cr"]
+
+[ext_resource type="Script" uid="uid://bfxcqwvb4o2h8" path="res://characters/L'Ankou/ankou_cutscene.gd" id="1_qrvtv"]
+[ext_resource type="VideoStream" uid="uid://dadjf0xafc2kp" path="res://assets/Ankou.ogv" id="2_pe5n8"]
+
+[node name="AnkouCutscene" type="CanvasLayer" unique_id=801639641]
+script = ExtResource("1_qrvtv")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=116373035]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_pe5n8")
+speed_scale = 4.0
+expand = true
