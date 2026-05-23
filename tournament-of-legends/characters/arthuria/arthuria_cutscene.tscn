@@ -110,7 +110,7 @@ speed_scale = 4.0
 expand = true
 
 [node name="Explosion" type="AnimatedSprite2D" parent="." unique_id=508410068]
-position = Vector2(561, 191)
+position = Vector2(681, 209)
 sprite_frames = SubResource("SpriteFrames_gnv4m")
 animation = &"Explosion"
 frame = 11

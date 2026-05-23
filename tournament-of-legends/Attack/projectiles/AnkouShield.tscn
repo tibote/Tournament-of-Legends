@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bnjo2baybnbyj"]
+
+[ext_resource type="Texture2D" uid="uid://2ut2reklpb2e" path="res://assets/l'Ankou/Skeleton Walk.png" id="1_65nk7"]
+[ext_resource type="Script" uid="uid://be15a8lmkowvg" path="res://Attack/projectiles/ankou_shield.gd" id="1_mkeov"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkeov"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(0, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iabe6"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(22, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3ur7"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(44, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcx53"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(66, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vv54j"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(88, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shkrs"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(110, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe005"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(132, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehh3r"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(154, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivl5r"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(176, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihcn5"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(198, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txonr"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(220, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx8cl"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(242, 0, 22, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ic5fk"]
+atlas = ExtResource("1_65nk7")
+region = Rect2(264, 0, 22, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_713iu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkeov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iabe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3ur7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcx53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vv54j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shkrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe005")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehh3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivl5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihcn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txonr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kx8cl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ic5fk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04iab"]
+size = Vector2(40.25, 66.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1c11a"]
+size = Vector2(44.75, 70.75)
+
+[node name="AnkouShield" type="CharacterBody2D" unique_id=1404586270]
+script = ExtResource("1_mkeov")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=585906689]
+position = Vector2(1.0000002, -1)
+scale = Vector2(2.1477273, 2.382576)
+sprite_frames = SubResource("SpriteFrames_713iu")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=231991229]
+position = Vector2(-3, 4)
+shape = SubResource("RectangleShape2D_04iab")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1693178079]
+position = Vector2(-17, 12)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1163297395]
+position = Vector2(17, -8)
+shape = SubResource("RectangleShape2D_1c11a")

@@ -9,7 +9,7 @@ var attacks: Array[BaseAttack] = []
 var hp: int
 var lvl_multiplicator: float = 1
 var defense_multiplicator: float = 1
-var jauge_spe: int = 1000
+var jauge_spe: int = 500
 var is_in_action := false
 
 func setup_attacks() -> void:
@@ -59,7 +59,7 @@ func charge_gauge(amount: int) -> void:
 	jauge_spe = min(jauge_spe + amount, 1000)
 
 func decharge_gauge(amount: int) -> void:
-	jauge_spe = min(jauge_spe - amount, 0)
+	jauge_spe = max(jauge_spe - amount, 0)
 
 func _handle_attack_inputs() -> void:
 	for i in attacks.size():
@@ -83,6 +83,15 @@ func take_damage(dmg: int) -> void:
 
 func _heal(heal: int) -> void:
 	hp += heal
+	if hp <= 0:
+		hp = 0
+	_die()
+
+func _die() -> void:
+	is_in_action = true
+	sprite_2d.play("death")
+	await sprite_2d.animation_finished
+	queue_free()
 
 func _process(delta: float) -> void:
 	for i in attacks.size():
