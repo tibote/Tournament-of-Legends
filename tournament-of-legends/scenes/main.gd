@@ -4,6 +4,10 @@ extends Node2D
 # Idéalement, rajoute un Marker2D dans ta scène principale nommé "SpawnPointBot" pour ne pas qu'ils apparaissent l'un sur l'autre
 @onready var spawn_point_bot = $SpawnPointBot 
 
+# --- CORRECTION 1 : On déclare et récupère le nœud du HUD ---
+# Remplace "Hud" par le nom exact de ton instance de HUD dans ta scène principale
+@onready var hud = $Hud 
+
 const SETTINGS_MENU_GAME = preload("res://scenes/menu/settings_menu_game.tscn")
 const BOT_CONTROLLER_SCRIPT = preload("res://bot/bot_controller.gd")
 
@@ -12,13 +16,19 @@ var bot_instance: BaseCharacter
 
 func _ready() -> void:
 	spawn_game()
+	
+	# --- CORRECTION 2 : On utilise les bonnes instances après le spawn ---
+	if player_instance and hud:
+		player_instance.hp_changed.connect(hud.update_player1_hp)
+	if bot_instance and hud:
+		bot_instance.hp_changed.connect(hud.update_player2_hp)
 
 func spawn_game() -> void:
 	# 1. Déterminer les chemins des scènes des personnages
 	var ankou_path = "res://characters/L'Ankou/Ankou.tscn"
 	var arthuria_path = "res://characters/arthuria/Arthuria.tscn"
 	
-	# Par sécurité, si aucun personnage n'est sélectionné, on met l'Ankou par défaut
+	# Par sécurité, si aucun personnage n'est sélectionné, on met Arthuria par défaut
 	if Global.selected_character_path == "":
 		Global.selected_character_path = arthuria_path
 		
@@ -26,11 +36,10 @@ func spawn_game() -> void:
 	var bot_scene_path = ""
 	
 	# --- LOGIQUE D'INVERSION JOUEUR / ENNEMI ---
-	# Si le joueur a choisi l'Ankou, le bot devient Arthuria, et inversement
-	if player_scene_path.to_lower().contains("Arthuria"):
-		bot_scene_path = arthuria_path
-	else:
+	if player_scene_path.to_lower().contains("arthuria"):
 		bot_scene_path = ankou_path
+	else:
+		bot_scene_path = arthuria_path
 
 	# 2. Spawn du Joueur
 	var character_scene = load(player_scene_path)
@@ -67,6 +76,10 @@ func spawn_game() -> void:
 		
 	else:
 		print("Erreur : Impossible de charger la scène du Bot ! (", bot_scene_path, ")")
+	
+	var hud = $CanvasLayer/Hud as Control
+	if hud and hud.has_method("setup_characters"):
+		hud.setup_characters(player_instance, bot_instance)
 
 func _on_player_died() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")

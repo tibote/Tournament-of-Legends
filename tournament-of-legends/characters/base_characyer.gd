@@ -17,10 +17,13 @@ var wants_jump: bool = false
 var wants_attack: Array[bool] = [false, false, false, false]
 var is_bot: bool = false
 
+signal hp_changed(new_hp: int)
+
 func setup_attacks() -> void:
 	pass
 
 func _ready() -> void:
+	add_to_group("player")
 	setup_attacks()
 
 @onready var hitbox: Area2D = $HitboxArea
@@ -82,18 +85,29 @@ func _handle_attack_inputs() -> void:
 			attacks[i].execute(self)
 
 func melee_hit(dmg: int) -> void:
-	hitbox.monitoring = true
-	for body in hitbox.get_overlapping_bodies():
+	# Chercher directement les corps proches plutôt que la hitbox
+	var space = get_world_2d().direct_space_state
+	var shape_query = PhysicsShapeQueryParameters2D.new()
+	shape_query.shape = hitbox.get_child(0).shape  # la CollisionShape
+	
+	# Orienter la hitbox selon la direction du sprite
+	var direction = -1.0 if sprite_2d.flip_h else 1.0
+	shape_query.transform = Transform2D(0, global_position + Vector2(direction * 50, 0))
+	shape_query.collision_mask = 1
+	
+	var results = space.intersect_shape(shape_query)
+	for result in results:
+		var body = result["collider"]
 		if body == self:
 			continue
 		if body is BaseCharacter:
 			body.take_damage(dmg)
 			charge_gauge(50)
 			body.decharge_gauge(50)
-	hitbox.monitoring = false
 
 func take_damage(dmg: int) -> void:
 	hp -= dmg * defense_multiplicator
+	hp_changed.emit(hp)
 	if hp <= 0:
 		hp = 0
 		_die()

@@ -1,41 +1,44 @@
 extends Control
 
-# Dictionnaire des personnages
 const CHARACTERS = {
 	"Arthuria": {
 		"avatar": preload("res://assets/arthuria/Arthuria.png"),
-		"max_hp": 1000000,
 		"name": "Arthuria"
 	},
 	"Ankou": {
 		"avatar": preload("res://assets/Ninja Frog/Jump (32x32).png"),
-		"max_hp": 800000,
 		"name": "Ankou"
 	}
 }
 
+var player: BaseCharacter
+var bot: BaseCharacter
+
 func _ready():
-	setup_player1(Global.player1_character)
-	setup_player2(Global.player2_character)
+	# Setup visuel (nom + avatar) comme avant
+	_setup_visuals(Global.player1_character, Global.player2_character)
 
-func setup_player1(character_name: String):
-	if not CHARACTERS.has(character_name): return
-	var data = CHARACTERS[character_name]
-	
-	# Récupération via les chemins réels de ta scène actuelle
-	$HBoxContainer/TextureRect.texture = data["avatar"]
-	$HBoxContainer/VBoxContainer/Label.text = data["name"]
-	$HBoxContainer/VBoxContainer/ProgressBar.max_value = data["max_hp"]
-	$HBoxContainer/VBoxContainer/ProgressBar.value = data["max_hp"]
-	# Note: Tu n'as pas de HPLabel (ex: "500 / 500") dans ton .tscn actuel, 
-	# donc on ne l'assigne pas pour éviter un crash.
+func _setup_visuals(p1_name: String, p2_name: String) -> void:
+	if CHARACTERS.has(p1_name):
+		var data = CHARACTERS[p1_name]
+		$HBoxContainer/TextureRect.texture = data["avatar"]
+		$HBoxContainer/VBoxContainer/Label.text = data["name"]
 
-func setup_player2(character_name: String):
-	if not CHARACTERS.has(character_name): return
-	var data = CHARACTERS[character_name]
-	
-	# Récupération pour le joueur 2
-	$HBoxContainer/TextureRect2.texture = data["avatar"]
-	$HBoxContainer/VBoxContainer2/Label.text = data["name"]
-	$HBoxContainer/VBoxContainer2/ProgressBar.max_value = data["max_hp"]
-	$HBoxContainer/VBoxContainer2/ProgressBar.value = data["max_hp"]
+	if CHARACTERS.has(p2_name):
+		var data = CHARACTERS[p2_name]
+		$HBoxContainer/TextureRect2.texture = data["avatar"]
+		$HBoxContainer/VBoxContainer2/Label.text = data["name"]
+
+func setup_characters(p: BaseCharacter, b: BaseCharacter) -> void:
+	player = p
+	bot = b
+	$HBoxContainer/VBoxContainer/ProgressBar.max_value = p.hp
+	$HBoxContainer/VBoxContainer2/ProgressBar.max_value = b.hp
+	$HBoxContainer/VBoxContainer/ProgressBar.value = p.hp
+	$HBoxContainer/VBoxContainer2/ProgressBar.value = b.hp
+
+func _process(_delta: float) -> void:
+	if is_instance_valid(player):
+		$HBoxContainer/VBoxContainer/ProgressBar.value = player.hp
+	if is_instance_valid(bot):
+		$HBoxContainer/VBoxContainer2/ProgressBar.value = bot.hp

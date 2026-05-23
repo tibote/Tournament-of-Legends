@@ -7,7 +7,7 @@ const DANGER_RANGE     := 120.0   # px — distance de danger immédiat
 const REACTION_DELAY   := 0.15    # secondes entre chaque décision IA
 const AGGRESSION_CD    := 2.0     # secondes avant une attaque CAC agressive hors portée
 const DEFEND_DURATION  := 0.6     # secondes max de défense consécutive
-const JUMP_HEIGHT_THR  := 50.0    # px — seuil vertical pour sauter vers la cible
+const JUMP_HEIGHT_THR  := 100.0    # px — seuil vertical pour sauter vers la cible
 
 # ── actions disponibles ───────────────────────────────────────────────────────
 enum Action { WAIT, LONG_ATTACK, CAC_ATTACK, DEFEND, MOVE, JUMP, RETREAT }
@@ -118,7 +118,11 @@ func _execute() -> void:
 
 		Action.JUMP:
 			character.wants_jump = true
-			_move_away_from_target()
+			if _immediate_danger(character.global_position.distance_to(target.global_position)):
+				_move_away_from_target()
+			else:
+				# Si on saute pour atteindre la cible, on avance vers elle
+				_move_toward_target()
 
 		Action.WAIT:
 			_face_target()
