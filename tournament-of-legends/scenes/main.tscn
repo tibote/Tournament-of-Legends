@@ -209,3 +209,5 @@ layer_0/tile_data = PackedInt32Array(720896, 458752, 4, 786432, 458752, 5, 72089
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1058655386]
 position = Vector2(406, 447)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1709184876]
