@@ -5,6 +5,8 @@ var speed: float = 700.0
 var damage: int = 0          # Assigné par fireball.gd au moment du lancement
 var direction: float = 1.0
 
+@onready var fire_boll_sound: AudioStreamPlayer = $FireBollSound
+
 func _ready() -> void:
 	# Connecte les signaux
 	body_entered.connect(_on_body_entered)
@@ -15,6 +17,7 @@ func launch(dir: float, dmg: int) -> void:
 	damage = dmg
 	# Retourne le sprite si on va à gauche
 	$BouleFeu.flip_h = direction < 0
+	fire_boll_sound.play()
 
 func _physics_process(delta: float) -> void:
 	position.x += speed * direction * delta
@@ -28,5 +31,11 @@ func _on_screen_exited() -> void:
 	_destroy()
 
 func _destroy() -> void:
-	# Ici tu peux jouer une animation d'explosion avant de détruire
+	set_physics_process(false)
+	body_entered.disconnect(_on_body_entered)
+	
+	$BouleFeu.visible = false
+	$CollisionShape2D.set_deferred("disabled", true)
+	
+	await fire_boll_sound.finished
 	queue_free()

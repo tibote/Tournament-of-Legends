@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://cadwey0m8n2s7"]
+
+[ext_resource type="Script" uid="uid://clppfdn2eu1gp" path="res://scenes/hud.gd" id="1_wfueu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5umd"]
+bg_color = Color(0.7176471, 0.14901961, 0.18039216, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Hud" type="Control" unique_id=2097804198]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wfueu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1403497564]
+layout_mode = 0
+offset_left = -316.0
+offset_top = 208.0
+offset_right = 316.0
+offset_bottom = 354.0
+color = Color(0.09803922, 0.09803922, 0.09803922, 0.54509807)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=494024139]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = 218.0
+offset_right = 206.0
+offset_bottom = 344.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1800140567]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1459494168]
+layout_mode = 2
+size_flags_vertical = 6
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/VBoxContainer" unique_id=559937474]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_y5umd")
+step = 1.0
+value = 100.0
+fill_mode = 1
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1981569697]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=150875577]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=1336823859]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=982187197]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/VBoxContainer2" unique_id=1052547477]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_y5umd")
+step = 1.0
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true

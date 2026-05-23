@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfjl2ogcv5yr0"
+path="res://.godot/imported/bruit dexplosion son.mp3-3770c67cc9a98db37d38601b5b662b72.mp3str"
+
+[deps]
+
+source_file="res://assets/bruit dexplosion son.mp3"
+dest_files=["res://.godot/imported/bruit dexplosion son.mp3-3770c67cc9a98db37d38601b5b662b72.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

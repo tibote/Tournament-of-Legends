@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://7l6mt3ndc8pg" path="res://Attack/projectiles/excalibaser.gd" id="1_a18er"]
 [ext_resource type="Texture2D" uid="uid://jmsa4rirgwi4" path="res://Attack/projectiles/boule-feu.png" id="2_a18er"]
+[ext_resource type="AudioStream" uid="uid://c1pttrgvkioev" path="res://assets/Fireball sound effect.mp3" id="3_k4qck"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a18er"]
 radius = 31.016125
@@ -22,3 +23,6 @@ flip_h = true
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=836293821]
 position = Vector2(-12, -12)
 rect = Rect2(-10, -10, 44, 44)
+
+[node name="FireBollSound" type="AudioStreamPlayer" parent="." unique_id=578713222]
+stream = ExtResource("3_k4qck")
