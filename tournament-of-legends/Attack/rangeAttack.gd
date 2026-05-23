@@ -1,0 +1,2 @@
+class_name range_attack
+extends BaseAttack
