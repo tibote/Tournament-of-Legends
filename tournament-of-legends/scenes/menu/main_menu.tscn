@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://o6qvq3gfc8v"]
 
 [ext_resource type="Script" uid="uid://cxk2ecqyidfsa" path="res://scenes/menu/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://bxbyoljqrp3hn" path="res://assets/bck.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://deadituoyo6d8" path="res://assets/bck.jpg" id="2_3rkf3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
-texture = ExtResource("1_l6cm7")
+texture = ExtResource("2_3rkf3")
 modulate_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
@@ -62,6 +62,7 @@ shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
 [node name="MainMenu" type="Control" unique_id=2104347212]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

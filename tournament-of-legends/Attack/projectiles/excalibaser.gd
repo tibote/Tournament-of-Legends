@@ -14,7 +14,7 @@ func launch(dir: float, dmg: int) -> void:
 	direction = dir
 	damage = dmg
 	# Retourne le sprite si on va à gauche
-	$Sprite2D.flip_h = direction < 0
+	$BouleFeu.flip_h = direction < 0
 
 func _physics_process(delta: float) -> void:
 	position.x += speed * direction * delta

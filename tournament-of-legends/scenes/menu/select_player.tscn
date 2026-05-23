@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bfnwhfx5m72dw"]
 
 [ext_resource type="Script" uid="uid://bhtljyivvfjmq" path="res://scenes/menu/select_player.gd" id="1_ebl4h"]
-[ext_resource type="Texture2D" uid="uid://bxbyoljqrp3hn" path="res://assets/bck.png" id="1_tn05a"]
 [ext_resource type="Texture2D" uid="uid://dh7knb0t711yw" path="res://assets/Ninja Frog/Jump (32x32).png" id="2_81tep"]
+[ext_resource type="Texture2D" uid="uid://deadituoyo6d8" path="res://assets/bck.jpg" id="2_ebl4h"]
 [ext_resource type="Texture2D" uid="uid://bai3yoiouvrco" path="res://assets/Pink Man/Jump (32x32).png" id="3_24v8s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81tep"]
-texture = ExtResource("1_tn05a")
+texture = ExtResource("2_ebl4h")
 modulate_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24v8s"]

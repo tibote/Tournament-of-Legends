@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xjc5atu7mhal"
-valid=false
+uid="uid://jmsa4rirgwi4"
+path="res://.godot/imported/boule-feu.png-d48c06b13a3fb2cf265455db6d35db59.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Attack/projectiles/boule-feu.png"
+dest_files=["res://.godot/imported/boule-feu.png-d48c06b13a3fb2cf265455db6d35db59.ctex"]
 
 [params]
 

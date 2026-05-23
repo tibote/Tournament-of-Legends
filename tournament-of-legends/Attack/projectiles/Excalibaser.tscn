@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b6351ucdd1p2u"]
 
-[ext_resource type="Texture2D" uid="uid://d0u4v5x11jjl6" path="res://assets/bdf.jpeg" id="1_4sns7"]
 [ext_resource type="Script" uid="uid://7l6mt3ndc8pg" path="res://Attack/projectiles/excalibaser.gd" id="1_a18er"]
+[ext_resource type="Texture2D" uid="uid://jmsa4rirgwi4" path="res://Attack/projectiles/boule-feu.png" id="2_a18er"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a18er"]
-radius = 15.0
+radius = 31.016125
 
 [node name="Excalibaser" type="Area2D" unique_id=570997818]
 collision_layer = 4
@@ -14,9 +14,11 @@ script = ExtResource("1_a18er")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=179168960]
 shape = SubResource("CircleShape2D_a18er")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2021551998]
-position = Vector2(4.5078945, 4.0052614)
-scale = Vector2(-0.1934044, 0.21743302)
-texture = ExtResource("1_4sns7")
+[node name="BouleFeu" type="Sprite2D" parent="." unique_id=1673674803]
+scale = Vector2(0.010643007, 0.010643007)
+texture = ExtResource("2_a18er")
+flip_h = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=836293821]
+position = Vector2(-12, -12)
+rect = Rect2(-10, -10, 44, 44)
