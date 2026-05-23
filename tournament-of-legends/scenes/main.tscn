@@ -172,10 +172,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -101.0
-offset_top = -48.0
-offset_right = 1271.0
-offset_bottom = 765.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 1249.0
+offset_bottom = 771.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -192,3 +192,5 @@ layer_0/tile_data = PackedInt32Array(786432, 458752, 0, 851968, 458752, 1, 78643
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1058655386]
 position = Vector2(406, 447)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1709184876]
