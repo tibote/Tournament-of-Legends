@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://ugrrrd1walli"]
-[ext_resource type="Texture2D" uid="uid://bxbyoljqrp3hn" path="res://assets/bck.png" id="2_72tb1"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sh77"]
-texture = ExtResource("2_72tb1")
+[ext_resource type="Script" uid="uid://b72b3fadq1gto" path="res://scenes/menu/settings_menu_game.gd" id="1_1yvqu"]
+[ext_resource type="Texture2D" uid="uid://deadituoyo6d8" path="res://assets/bck.jpg" id="1_jdk7s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1yvqu"]
+texture = ExtResource("1_jdk7s")
 modulate_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qk8rs"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72tb1"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -14,7 +16,7 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_veiyd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dclrg"]
 bg_color = Color(0.42745098, 0.42745098, 0.42745098, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -23,7 +25,7 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bta0v"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsoeg"]
 bg_color = Color(0.6901961, 0.6901961, 0.6901961, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -32,7 +34,7 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sh77"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxvjj"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -41,7 +43,7 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gququ"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xg106"]
 bg_color = Color(0.42745098, 0.42745098, 0.42745098, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -50,7 +52,7 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8154y"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecpai"]
 bg_color = Color(0.6901961, 0.6901961, 0.6901961, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -59,17 +61,17 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cags2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_at0mx"]
 bg_color = Color(0.42745098, 0.42745098, 0.42745098, 1)
 border_width_top = 2
 border_width_bottom = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i15dv"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1yfrw"]
 bg_color = Color(0.42745098, 0.42745098, 0.42745098, 1)
 corner_radius_top_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj78h"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ictr"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -78,7 +80,7 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40ge0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el0y4"]
 bg_color = Color(0.42745098, 0.42745098, 0.42745098, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -87,7 +89,7 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8eva"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_er3bv"]
 bg_color = Color(0.6901961, 0.6901961, 0.6901961, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -96,18 +98,16 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[node name="SettingsMenu" type="Control" unique_id=764795792]
+[node name="SettingsMenuGame" type="Control" unique_id=79208762]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1yvqu")
 
-[node name="Panel" type="Panel" parent="." unique_id=423274969]
+[node name="Panel" type="Panel" parent="." unique_id=1895733198]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -116,9 +116,9 @@ offset_left = -2.0
 offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_0sh77")
+theme_override_styles/panel = SubResource("StyleBoxTexture_1yvqu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=134176096]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1346711447]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -134,20 +134,20 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Window_settings" type="VBoxContainer" parent="VBoxContainer" unique_id=490606556]
+[node name="Window_settings" type="VBoxContainer" parent="VBoxContainer" unique_id=1298753227]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="title" type="Label" parent="VBoxContainer/Window_settings" unique_id=1501881755]
+[node name="title" type="Label" parent="VBoxContainer/Window_settings" unique_id=2087645165]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Window settings"
 
-[node name="btn" type="HBoxContainer" parent="VBoxContainer/Window_settings" unique_id=1708554697]
+[node name="btn" type="HBoxContainer" parent="VBoxContainer/Window_settings" unique_id=1829955263]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Btn_window_settings_fullscreen" type="Button" parent="VBoxContainer/Window_settings/btn" unique_id=45181775]
+[node name="Btn_window_settings_fullscreen" type="Button" parent="VBoxContainer/Window_settings/btn" unique_id=1651733021]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_neighbor_left = NodePath(".")
@@ -155,12 +155,12 @@ focus_neighbor_top = NodePath("../../../Vibration/CheckButton")
 focus_neighbor_right = NodePath("../Btn_window_settings_windowed")
 focus_neighbor_bottom = NodePath("../../../Sound/HSldr_sound")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_qk8rs")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_veiyd")
-theme_override_styles/focus = SubResource("StyleBoxFlat_bta0v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_72tb1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dclrg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rsoeg")
 text = "fullscreen"
 
-[node name="Btn_window_settings_windowed" type="Button" parent="VBoxContainer/Window_settings/btn" unique_id=154456247]
+[node name="Btn_window_settings_windowed" type="Button" parent="VBoxContainer/Window_settings/btn" unique_id=1300557138]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_neighbor_left = NodePath("../Btn_window_settings_fullscreen")
@@ -168,41 +168,41 @@ focus_neighbor_top = NodePath("../../../Vibration/CheckButton")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../../Sound/HSldr_sound")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_0sh77")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gququ")
-theme_override_styles/focus = SubResource("StyleBoxFlat_8154y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dxvjj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xg106")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ecpai")
 text = "windowed"
 
-[node name="Sound" type="VBoxContainer" parent="VBoxContainer" unique_id=1780616841]
+[node name="Sound" type="VBoxContainer" parent="VBoxContainer" unique_id=208791639]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="title" type="Label" parent="VBoxContainer/Sound" unique_id=2138238429]
+[node name="title" type="Label" parent="VBoxContainer/Sound" unique_id=136570804]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Sound"
 
-[node name="HSldr_sound" type="HSlider" parent="VBoxContainer/Sound" unique_id=216798501]
+[node name="HSldr_sound" type="HSlider" parent="VBoxContainer/Sound" unique_id=1170751630]
 layout_mode = 2
 size_flags_vertical = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../../Window_settings/btn/Btn_window_settings_fullscreen")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../Vibration/CheckButton")
-theme_override_styles/slider = SubResource("StyleBoxFlat_cags2")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_i15dv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_at0mx")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1yfrw")
 value = 75.0
 
-[node name="Vibration" type="VBoxContainer" parent="VBoxContainer" unique_id=1158282447]
+[node name="Vibration" type="VBoxContainer" parent="VBoxContainer" unique_id=694959319]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="title" type="Label" parent="VBoxContainer/Vibration" unique_id=1192225764]
+[node name="title" type="Label" parent="VBoxContainer/Vibration" unique_id=2019980584]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Vibration"
 
-[node name="CheckButton" type="CheckButton" parent="VBoxContainer/Vibration" unique_id=1941418597]
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/Vibration" unique_id=2053752164]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -211,15 +211,15 @@ focus_neighbor_top = NodePath("../../Sound/HSldr_sound")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../Window_settings/btn/Btn_window_settings_fullscreen")
 
-[node name="Window_settings2" type="VBoxContainer" parent="VBoxContainer" unique_id=1386954651]
+[node name="Window_settings2" type="VBoxContainer" parent="VBoxContainer" unique_id=663673462]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="btn" type="HBoxContainer" parent="VBoxContainer/Window_settings2" unique_id=1776304193]
+[node name="btn" type="HBoxContainer" parent="VBoxContainer/Window_settings2" unique_id=310794716]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Btn_main_menu" type="Button" parent="VBoxContainer/Window_settings2/btn" unique_id=284362188]
+[node name="Btn_main_menu" type="Button" parent="VBoxContainer/Window_settings2/btn" unique_id=1843110110]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_neighbor_left = NodePath(".")
@@ -227,12 +227,12 @@ focus_neighbor_top = NodePath("../../../Vibration/CheckButton")
 focus_neighbor_right = NodePath("../Btn_quit")
 focus_neighbor_bottom = NodePath("../../../Sound/HSldr_sound")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_qk8rs")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_veiyd")
-theme_override_styles/focus = SubResource("StyleBoxFlat_bta0v")
-text = "Main Menu"
+theme_override_styles/normal = SubResource("StyleBoxFlat_72tb1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dclrg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rsoeg")
+text = "Main menu"
 
-[node name="Btn_quit" type="Button" parent="VBoxContainer/Window_settings2/btn" unique_id=338530814]
+[node name="Btn_quit" type="Button" parent="VBoxContainer/Window_settings2/btn" unique_id=87393290]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_neighbor_left = NodePath("../Btn_main_menu")
@@ -240,12 +240,12 @@ focus_neighbor_top = NodePath("../../../Vibration/CheckButton")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../../Sound/HSldr_sound")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_0sh77")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gququ")
-theme_override_styles/focus = SubResource("StyleBoxFlat_8154y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dxvjj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xg106")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ecpai")
 text = "Quit"
 
-[node name="Btn_exit" type="Button" parent="." unique_id=231691221]
+[node name="Btn_exit" type="Button" parent="." unique_id=1176943574]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 2
@@ -257,14 +257,13 @@ offset_right = 116.46479
 offset_bottom = -27.0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_lj78h")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_40ge0")
-theme_override_styles/focus = SubResource("StyleBoxFlat_b8eva")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ictr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_el0y4")
+theme_override_styles/focus = SubResource("StyleBoxFlat_er3bv")
 text = "Return"
 
 [connection signal="pressed" from="VBoxContainer/Window_settings/btn/Btn_window_settings_fullscreen" to="." method="_on_btn_window_settings_fullscreen_pressed"]
 [connection signal="pressed" from="VBoxContainer/Window_settings/btn/Btn_window_settings_windowed" to="." method="_on_btn_window_settings_windowed_pressed"]
-[connection signal="toggled" from="VBoxContainer/Vibration/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="VBoxContainer/Window_settings2/btn/Btn_main_menu" to="." method="_on_btn_main_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/Window_settings2/btn/Btn_quit" to="." method="_on_btn_quit_pressed"]
 [connection signal="pressed" from="Btn_exit" to="." method="_on_btn_exit_pressed"]
