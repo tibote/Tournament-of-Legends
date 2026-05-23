@@ -39,6 +39,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("simple_attack_button") and not is_attacking:
 		is_attacking = true
 		sprite_2d.play("simple_attack")
+		if Global.vibration_enable:
+			Input.start_joy_vibration(0, 0.5, 1.0, 0.3)
 	
 	move_and_slide()
 	
@@ -47,3 +49,4 @@ func _physics_process(delta: float) -> void:
 	
 func _on_attack_finished():
 	is_attacking = false
+	Input.stop_joy_vibration(0)
