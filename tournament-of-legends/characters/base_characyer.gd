@@ -108,6 +108,11 @@ func melee_hit(dmg: int) -> void:
 func take_damage(dmg: int) -> void:
 	hp -= dmg * defense_multiplicator
 	hp_changed.emit(hp)
+	
+	if Global.vibration_enable and not is_bot:
+		var intensity = clamp(float(dmg) / 100000.0, 0.1, 1.0)
+		Input.start_joy_vibration(0, intensity, intensity, 0.3)
+	
 	if hp <= 0:
 		hp = 0
 		_die()
@@ -135,3 +140,7 @@ func _update_action_state() -> void:
 	if not still_channelling:
 		sprite_2d.play("idle") 
 	is_in_action = still_channelling
+
+func play_melee_sound() -> void:
+	if has_node("MeleeSound"):
+		get_node("MeleeSound").play()

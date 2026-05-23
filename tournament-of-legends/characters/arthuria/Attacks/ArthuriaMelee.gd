@@ -12,3 +12,7 @@ func _perform(character: BaseCharacter) -> void:
 	var direction = -1 if character.sprite_2d.flip_h else 1
 	character.melee_hit(_damage)
 	
+	var sound = character.get_node_or_null("AudioStreamPlayer")
+	if sound:
+		sound.play()
+	

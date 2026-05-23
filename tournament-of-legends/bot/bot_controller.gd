@@ -2,7 +2,7 @@ class_name BotController
 extends Node
 
 # ── tuneable constants ────────────────────────────────────────────────────────
-const CAC_RANGE        := 40.0    # px — distance considérée comme corps à corps
+const CAC_RANGE        := 120.0    # px — distance considérée comme corps à corps
 const DANGER_RANGE     := 120.0   # px — distance de danger immédiat
 const REACTION_DELAY   := 0.15    # secondes entre chaque décision IA
 const AGGRESSION_CD    := 2.0     # secondes avant une attaque CAC agressive hors portée

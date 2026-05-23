@@ -15,5 +15,5 @@ func _perform(character: BaseCharacter) -> void:
 	character.get_tree().current_scene.add_child(projectile)
 	projectile.global_position = character.global_position
 	var direction: float = -1.0 if character.sprite_2d.flip_h else 1.0
-	projectile.launch(direction, _damage)
+	projectile.launch(direction, _damage, character)
 	
