@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b8e2n53qkao44"]
+[gd_scene format=3 uid="uid://cjcf0r2jmvcbd"]
 
-[ext_resource type="Script" uid="uid://bemmwd5w5so8x" path="res://characters/arthuria/arthuria.gd" id="1_l6mfb"]
+[ext_resource type="Script" path="res://characters/arthuria/arthuria.gd" id="1_l6mfb"]
 [ext_resource type="Texture2D" uid="uid://boptfur58unaw" path="res://assets/arthuria/DEFEND.png" id="2_ehmkx"]
 [ext_resource type="Texture2D" uid="uid://bbisxv5k0vdof" path="res://assets/arthuria/IDLE.png" id="2_kudnt"]
 [ext_resource type="Texture2D" uid="uid://c3obbxivie3bn" path="res://assets/arthuria/DEATH.png" id="2_toxnw"]

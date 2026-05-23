@@ -9,7 +9,7 @@ var attacks: Array[BaseAttack] = []
 var hp: int
 var lvl_multiplicator: float = 1
 var defense_multiplicator: float = 1
-var jauge_spe: int = 500
+var jauge_spe: int = 1000
 var is_in_action := false
 
 func setup_attacks() -> void:
@@ -78,7 +78,7 @@ func melee_hit(dmg: int) -> void:
 			body.decharge_gauge(50)
 	hitbox.monitoring = false
 
-func _take_damage(dmg: int) -> void:
+func take_damage(dmg: int) -> void:
 	hp -= dmg * defense_multiplicator
 
 func _heal(heal: int) -> void:

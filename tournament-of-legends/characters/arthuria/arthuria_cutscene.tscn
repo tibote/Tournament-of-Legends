@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://bwh4eqta1thkx"]
+
+[ext_resource type="Script" uid="uid://bpvfavp32j0yb" path="res://characters/arthuria/ArthuriaCutscene.gd" id="1_gem14"]
+[ext_resource type="VideoStream" uid="uid://basgglh0nyba4" path="res://assets/arthuria/Saber Excalibur [4K] FateZero Season 2.ogv" id="2_3uehw"]
+[ext_resource type="Texture2D" uid="uid://b0syk708n3ylv" path="res://assets/cartoon-explosion-transparent-set/16762.jpg" id="3_h7eg1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipbus"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(1102, 3360, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g50x7"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(1102, 2520, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thr56"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(1102, 1680, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg220"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(1102, 840, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ytfg"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(3306, 840, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3bxx"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(3306, 1680, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbwke"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(3306, 2520, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix4lm"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(3306, 3360, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tbs4"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(2204, 840, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nloc"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(2204, 1680, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0be3k"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(2204, 2520, 1102, 840)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4ulb"]
+atlas = ExtResource("3_h7eg1")
+region = Rect2(2204, 3360, 1102, 840)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gnv4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipbus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g50x7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thr56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg220")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ytfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3bxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbwke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix4lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tbs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nloc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0be3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4ulb")
+}],
+"loop": false,
+"name": &"Explosion",
+"speed": 5.0
+}]
+
+[node name="ArthuriaCutscene" type="CanvasLayer" unique_id=1194342264]
+script = ExtResource("1_gem14")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1308677251]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_3uehw")
+speed_scale = 4.0
+expand = true
+
+[node name="Explosion" type="AnimatedSprite2D" parent="." unique_id=508410068]
+position = Vector2(561, 191)
+sprite_frames = SubResource("SpriteFrames_gnv4m")
+animation = &"Explosion"
+frame = 11
+frame_progress = 1.0
