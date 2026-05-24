@@ -2,7 +2,7 @@ class_name Crawstorm
 extends Area2D
 
 var speed: float = 500.0
-var damage: int = 0
+var damage: int = 150000
 var direction: float = 1.0
 
 func _ready() -> void:
@@ -22,7 +22,6 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is BaseCharacter:
 		body.take_damage(damage)
-	_destroy()
 
 func _on_screen_exited() -> void:
 	_destroy()

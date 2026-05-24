@@ -3,7 +3,7 @@ extends melee_attack
 
 # Called when the node enters the scene tree for the first time.
 func _init() -> void:
-	_damage = 100000
+	_damage = 200000
 	_cooldown = 0.7
 	_channelling = 0.4
 

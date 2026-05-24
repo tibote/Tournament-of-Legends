@@ -2,7 +2,7 @@ class_name AnkouRange
 extends range_attack
 
 func _init() -> void:
-	_damage = 120000
+	_damage = 200000
 	_cooldown = 10
 	_channelling = 0.3
 	projectile_speed = 400

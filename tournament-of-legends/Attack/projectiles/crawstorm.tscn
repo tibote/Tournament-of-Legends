@@ -23,5 +23,5 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xdfcf")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1412010165]
-position = Vector2(-454, -187)
-rect = Rect2(252, 35, 438, 244)
+position = Vector2(-241, -102)
+rect = Rect2(-50, -50, 612, 244)
